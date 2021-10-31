@@ -5,24 +5,23 @@ img = cv.imread('photos/dog.jpg')
 cv.imshow('Img', img)
 
 
-# # Blur (smooth) the img
-# smooth = cv.GaussianBlur(img,(5,5), cv.BORDER_DEFAULT)
-# cv.imshow('Gaussian Blur', smooth)
+# Blur (smooth) the img
+smooth = cv.GaussianBlur(img,(5,5), cv.BORDER_DEFAULT)
+cv.imshow('Gaussian Blur', smooth)
 
-# # Averaging blur
-# average = cv.blur(img, (5,5))
-# cv.imshow('Average Blur', average)
+# Averaging blur
+average = cv.blur(img, (5,5))
+cv.imshow('Average Blur', average)
 
-# # Median Blur
-# median = cv.medianBlur(img, 5)
-# cv.imshow('Median Blur', median)
+# Median Blur
+median = cv.medianBlur(img, 5)
+cv.imshow('Median Blur', median)
 
-# # Bilateral Blur -> edges remains without distortion
-# bilateral = cv.bilateralFilter(img, 5, 15, 15)
-# cv.imshow('Bilateral', bilateral)
+# Bilateral Blur -> edges remains without distortion
+bilateral = cv.bilateralFilter(img, 5, 15, 15)
+cv.imshow('Bilateral', bilateral)
 
-# # wait any key to exit
-# cv.waitKey(0)
+
 
 import numpy as np
 
@@ -49,5 +48,5 @@ cv.imshow('Sobely', sobely)
 combined_sobel = cv.bitwise_or(sobelx,sobely)
 cv.imshow('Combined Sobel', combined_sobel)
 
-# # wait any key to exit
+# wait any key to exit
 cv.waitKey(0)
